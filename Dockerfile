@@ -14,4 +14,4 @@ RUN curl -O -sSL https://github.com/balena-io/balena-cli/releases/download/v13.1
 COPY entrypoint.sh ./entrypoint.sh
 
 ## Entrypoint
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
