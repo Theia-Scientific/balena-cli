@@ -1,0 +1,24 @@
+name: "Balena CLI"
+branding:
+  color: "yellow"
+  icon: "upload-cloud"
+description: "Continuously deliver your IoT applications to BalenaCloud"
+inputs:
+  application_path:
+    description: "Optional. Provide a subfolder path to your BalenaCloud application"
+    required: false
+    default: "."
+  balena_api_token:
+    description: "BalenaCloud API Key"
+    required: true
+  balena_command:
+    description: "The command to execute with balena"
+    required: true
+  balena_secrets:
+    description: "Optional contents of a balena secrets.json file"
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.balena_command }}
