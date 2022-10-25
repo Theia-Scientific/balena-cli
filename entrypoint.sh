@@ -17,10 +17,15 @@ if [[ "${INPUT_BALENA_API_TOKEN}" == "" ]]; then
   exit 1
 fi
 
+# Use Alternative environment if provided
+if [[ "${INPUT_BALENA_URL}" != "" ]]; then
+  echo "balenaUrl: '${INPUT_BALENA_URL}'" >~/.balenarc.yml
+fi
+
 # Write secrets file if provided
 if [[ "${INPUT_BALENA_SECRETS}" != "" ]]; then
   mkdir -p ~/.balena/
-  echo ${INPUT_BALENA_SECRETS} > ~/.balena/secrets.json
+  echo ${INPUT_BALENA_SECRETS} >~/.balena/secrets.json
 fi
 
 # Log in to Balena
