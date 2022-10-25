@@ -16,6 +16,10 @@ Continuously deliver your applications to [BalenaCloud](https://www.balena.io/).
 
 _Optional_: Provide a sub-path to the location for application being deployed to BalenaCloud. Defaults to the workspace root.
 
+### `balena_url`
+
+_Optional_: Provide the URL for the alternative environment.
+
 ### `balena_secrets`
 
 _Optional_: Provide the contents of a balena secrets.json file for authenticating against private registries.
@@ -46,6 +50,7 @@ jobs:
         with:
           balena_api_token: ${{secrets.BALENA_TOKEN}}
           balena_command: "push ${{secrets.BALENA_FLEET}} --logs"
+          balena_url: balena-staging.com
           balena_secrets: |
             {
               'ghcr.io': {
