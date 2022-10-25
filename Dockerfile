@@ -6,8 +6,11 @@ RUN apt-get update && apt-get install -y curl unzip
 
 WORKDIR /app
 
+## Version
+ENV CLI_VERSION=14.5.2
+
 ## Download and Unzip Balena CLI
-RUN curl -O -sSL https://github.com/balena-io/balena-cli/releases/download/v14.3.0/balena-cli-v14.5.2-linux-x64-standalone.zip && \ 
+RUN curl -O -sSL https://github.com/balena-io/balena-cli/releases/download/v${CLI_VERSION}/balena-cli-v${CLI_VERSION}-linux-x64-standalone.zip && \ 
 unzip balena-cli-*-linux-x64-standalone.zip
 
 ## Copy Entrypoint
