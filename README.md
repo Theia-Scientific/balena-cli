@@ -35,7 +35,7 @@ on:
   push:
     # Only run workflow for pushes to specific branches
     branches:
-      - master
+      - main
 
 jobs:
   balena-deploy:
