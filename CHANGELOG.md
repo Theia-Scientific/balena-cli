@@ -4,7 +4,7 @@
 
 ### Features / Enhancements
 
-- Changed Balena CLI to use the latest release 17.3.0 ([#7](https://github.com/Theia-Scientific/balena-cli/pull/7))
+- Changed Balena CLI to use the latest release 17.3.0 ([#9](https://github.com/Theia-Scientific/balena-cli/pull/9))
 
 ## v15 (2023-01-31)
 
