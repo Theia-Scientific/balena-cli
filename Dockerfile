@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y curl unzip
 WORKDIR /app
 
 ## Version
-ENV CLI_VERSION=15.0.3
+ENV CLI_VERSION=17.3.0
 
 ## Download and Unzip Balena CLI
 RUN curl -O -sSL https://github.com/balena-io/balena-cli/releases/download/v${CLI_VERSION}/balena-cli-v${CLI_VERSION}-linux-x64-standalone.zip && \ 
