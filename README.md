@@ -42,10 +42,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Balena Deploy
-        uses: Theia-Scientific/balena-cli@v1
+        uses: Theia-Scientific/balena-cli@v18
         if: success()
         with:
           balena_api_token: ${{secrets.BALENA_TOKEN}}
