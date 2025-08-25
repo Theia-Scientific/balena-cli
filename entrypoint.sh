@@ -29,7 +29,7 @@ if [[ "${INPUT_BALENA_SECRETS}" != "" ]]; then
 fi
 
 # Log in to Balena
-/app/balena-cli/balena login --token "${INPUT_BALENA_API_TOKEN}"
+/app/balena/bin/balena login --token "${INPUT_BALENA_API_TOKEN}"
 
 # Run command
-/app/balena-cli/balena "$*"
+/app/balena/bin/balena "$*"
