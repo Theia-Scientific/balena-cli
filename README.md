@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Balena Deploy
-        uses: Theia-Scientific/balena-cli@v18
+        uses: Theia-Scientific/balena-cli@v22
         if: success()
         with:
           balena_api_token: ${{secrets.BALENA_TOKEN}}
