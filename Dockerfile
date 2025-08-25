@@ -21,7 +21,7 @@ RUN apt update && \
 
 ## Download and Unzip Balena CLI
 RUN curl -O -sSL ${CLI_URL}/${CLI_ARCHIVE} && \
-    tar -xvzf balena-cli-${CLI_ARCHIVE}-linux-x64-standalone.tar.gz
+    tar -xvzf ${CLI_ARCHIVE}
 
 ## Copy Entrypoint
 COPY entrypoint.sh ./entrypoint.sh
