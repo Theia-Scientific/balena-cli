@@ -32,4 +32,4 @@ jobs:
           name: ${{ steps.changelog.outputs.title }}
           body_path: ${{ steps.changelog.outputs.path }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          draft: true
+          draft: false
