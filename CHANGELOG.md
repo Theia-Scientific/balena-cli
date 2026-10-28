@@ -1,5 +1,11 @@
 # Change Log
 
+## v25 (2026-10-28)
+
+### Features / Enhancements
+
+- Changed Balena CLI to use the latest release 25.2.7 ([#20](https://github.com/Theia-Scientific/balena-cli/pull/20))
+
 ## v22 (2025-08-25)
 
 ### Features / Enhancements
