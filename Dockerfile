@@ -4,7 +4,7 @@ LABEL Description="Use the Balena CLI to perform actions"
 ## Build arguments
 
 ## CLI version
-ARG CLI_VERSION=22.2.4
+ARG CLI_VERSION=25.2.7
 ARG CLI_URL=https://github.com/balena-io/balena-cli/releases/download/v${CLI_VERSION}
 ARG CLI_ARCHIVE=balena-cli-v${CLI_VERSION}-linux-x64-standalone.tar.gz
 ARG DEBIAN_FRONTEND=noninteractive
