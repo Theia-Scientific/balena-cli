@@ -11,7 +11,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout source code
+        uses: actions/checkout@v7
 
       - name: Read changelog
         id: changelog
@@ -25,11 +26,10 @@ jobs:
           echo "version=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
 
       - name: Create release
-        id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.ref }}
           name: ${{ steps.changelog.outputs.title }}
           body_path: ${{ steps.changelog.outputs.path }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          draft: true
+          draft: false
