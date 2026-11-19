@@ -21,8 +21,10 @@ RUN apt update && \
 
 ## Download and extract Balena CLI
 RUN curl -O -sSL ${CLI_URL}/${CLI_ARCHIVE} && \
-    tar -xvzf ${CLI_ARCHIVE} && \
-    /app/balena/bin/balena --version
+    tar -xzf ${CLI_ARCHIVE}
+
+## Check the balena CLI version
+RUN /app/balena/bin/balena --version
 
 ## Copy Entrypoint
 COPY entrypoint.sh ./entrypoint.sh
