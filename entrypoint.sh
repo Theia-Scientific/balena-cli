@@ -32,4 +32,5 @@ fi
 /app/balena/bin/balena login --token "${INPUT_BALENA_API_TOKEN}"
 
 # Run command
-/app/balena/bin/balena "$@"
+# shellcheck disable=SC2068
+exec /app/balena/bin/balena $@
