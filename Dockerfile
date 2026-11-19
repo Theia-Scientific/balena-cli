@@ -4,7 +4,7 @@ LABEL Description="Use the Balena CLI to perform actions"
 ## Build arguments
 
 ## CLI version
-ARG CLI_VERSION=25.2.7
+ARG CLI_VERSION=25.2.29
 ARG CLI_URL=https://github.com/balena-io/balena-cli/releases/download/v${CLI_VERSION}
 ARG CLI_ARCHIVE=balena-cli-v${CLI_VERSION}-linux-x64-standalone.tar.gz
 ARG DEBIAN_FRONTEND=noninteractive
@@ -23,7 +23,7 @@ RUN apt update && \
 RUN curl -O -sSL ${CLI_URL}/${CLI_ARCHIVE} && \
     tar -xzf ${CLI_ARCHIVE}
 
-## Check the balena CLI version
+## Check the Balena CLI version
 RUN /app/balena/bin/balena --version
 
 ## Copy Entrypoint
