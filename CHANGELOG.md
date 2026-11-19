@@ -1,5 +1,15 @@
 # Change Log
 
+## v25.0.1 (2026-11-19)
+
+### Features / Enhancements
+
+- Changed Balena CLI to use the latest release 25.2.29 ([#23](https://github.com/Theia-Scientific/balena-cli/pull/23))
+
+### Bug fixes
+
+- Fixed bash syntax in entrypoint script ([#23](https://github.com/Theia-Scientific/balena-cli/pull/23))
+
 ## v25 (2026-10-28)
 
 ### Features / Enhancements
